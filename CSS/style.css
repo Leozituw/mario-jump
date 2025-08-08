@@ -1,0 +1,82 @@
+/* Aplicando Reset na página*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.rm_game {
+    width: 100%;
+    height: 500px;
+    margin: 0 auto;
+    border-bottom: solid 16px rgb(97, 243, 78);
+    background: linear-gradient(#87ceeb, #e0f6ff);
+
+    position: relative;
+    overflow: hidden;
+}
+
+.obj_mario {
+    position: absolute;
+    bottom: 0;
+    width: 150px;
+}
+
+.act_jump {
+    animation: anim-jump 500ms ease-out;
+}
+
+.obj_pipe {
+    position: absolute;
+    bottom: 0;
+    width: 70px;
+    animation: anim-pipe 1.8s infinite linear;
+}
+
+.obj_cloud {
+    position: absolute;
+    width: 520px;
+    animation: anim-cloud 7s infinite linear;
+}
+
+@keyframes anim-jump {
+    0% {
+        bottom: 0;
+    } 
+
+    40% {
+        bottom: 190px;
+    }
+
+    50% {
+        bottom: 200px;
+    }
+
+    60% {
+        bottom: 190px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes anim-pipe {
+    from {
+        right: -70px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes anim-cloud {
+    from {
+        right: -520px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
